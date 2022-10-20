@@ -1,0 +1,25 @@
+<table class="table table-striped">
+    <h3> <p>Order List</p> </h3>
+    <thead>
+        <tr>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>OrderDate</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.Quantity}}</td>
+            <td>{{this.Total}}</td>
+            <td>{{this.OrderDate}}</td>
+            <td>
+                <a href="/orders/{{this._id}}">
+                    <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
